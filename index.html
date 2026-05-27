@@ -1,562 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AZYNIX | Academic Freelance Partner</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AZYNIX — Next-Gen Academic Freelancing</title>
+  <meta name="description" content="AZYNIX delivers next-generation academic freelancing. Smart assignments, zero stress. Premium research papers, reports, presentations and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  
+  <!-- Custom Cursor -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+  
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <h1 class="logo animated-logo">AZYNIX</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
-      <a href="#submit" class="btn">Submit</a>
-    </nav>
-  </header>
-
-  <!-- HERO WITH ANIMATED BACKGROUND -->
-  <section class="hero animated-bg">
-    <div class="particles"></div>
-
-    <h2>Smart Assignments, Zero Stress</h2>
-    <p>Fast • Affordable • Plagiarism-Free</p>
-    <a href="#submit" class="btn btn-primary">Get Started</a>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <h3>Our Services</h3>
-    <div class="cards">
-      <div class="card glass-card">Assignments</div>
-      <div class="card glass-card">Reports</div>
-      <div class="card glass-card">Presentations</div>
-      <div class="card glass-card">Final Year Projects</div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section dark">
-    <h3>About AZYNIX</h3>
-    <p>We are your academic freelance partners, dedicated to helping students achieve their academic goals with high-quality, plagiarism-free work delivered on time.</p>
-    <div class="stats">
-      <div class="stat">
-        <h4>500+</h4>
-        <p>Projects Completed</p>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-text" data-text="AZYNIX">AZYNIX</span>
+        <span class="logo-dot"></span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#services" class="nav-link" data-section="services">Services</a>
+        <a href="#stats" class="nav-link" data-section="stats">Stats</a>
+        <a href="#reviews" class="nav-link" data-section="reviews">Reviews</a>
+        <a href="#pricing" class="nav-link" data-section="pricing">Pricing</a>
+        <a href="#submit" class="nav-link" data-section="submit">Submit</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
       </div>
-      <div class="stat">
-        <h4>98%</h4>
-        <p>Client Satisfaction</p>
-      </div>
-      <div class="stat">
-        <h4>24/7</h4>
-        <p>Support Available</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="section">
-    <h3>What Our Clients Say</h3>
-    <div class="testimonials">
-      <div class="testimonials-wrapper">
-        <div class="testimonial glass-card">
-          <p>"AZYNIX helped me with my final year project. Excellent quality and timely delivery!"</p>
-          <cite>- Roshan Perera, Computer Science Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Got my assignment done perfectly. Highly recommend their services."</p>
-          <cite>- Anushka Silva, Business Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional and reliable. Will definitely use again for future projects."</p>
-          <cite>- Priya Jayawardene, Software Engineering Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding work! My report was completed ahead of schedule with exceptional quality."</p>
-          <cite>- Madhavi Silva, Finance Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Best service in the market. The team understood my requirements perfectly."</p>
-          <cite>- Dilshan Gamage, Software Engineering Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very affordable and professional. Got my thesis completed in time!"</p>
-          <cite>- Lakshmi Dissanayake, Law Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Amazing turnaround time and excellent communication throughout the process."</p>
-          <cite>- Nishan Bandara, Marketing Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Plagiarism-free work with proper citations. Exactly what I needed!"</p>
-          <cite>- Amara Senanayake, BM Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Highly professional team. They exceeded my expectations completely."</p>
-          <cite>- Kavith Jayasooriya, Architecture Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great quality and very affordable pricing. Will recommend to friends!"</p>
-          <cite>- Deepika Gunasekara, Psychology Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Perfect assignment delivery. The quality was beyond my expectations."</p>
-          <cite>- Sanjay Wijesinghe, Economics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Fantastic service with excellent customer support. Keep it up!"</p>
-          <cite>- Ramani Herath, BM Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very reliable and trustworthy. I will definitely come back for more work."</p>
-          <cite>- Viraj Perera, Computer Engineering Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent quality work delivered on time. Highly satisfied with the service."</p>
-          <cite>- Neshani Abhayasinghe, Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Quick response and professional execution. Absolutely recommend!"</p>
-          <cite>- Ashish Kumar, Software Development Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"They delivered exactly what I needed. Great value for money!"</p>
-          <cite>- Shanika De Silva, English Literature Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding professionalism and attention to detail. Very impressed!"</p>
-          <cite>- Rohinee Jayasinghe, Statistics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Reliable service with excellent feedback and revisions."</p>
-          <cite>- Avinash Perera, Physics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"My grades improved significantly after using their services!"</p>
-          <cite>- Hasini Jayathilake, SE Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Best decision I made for my academic work. Highly recommended!"</p>
-          <cite>- Dinesh Kumara, SE Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional team that delivers quality work consistently."</p>
-          <cite>- Sampath Ranasinghe, Geology Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Exceptional service and very patient with my requirements."</p>
-          <cite>- Charmaine De Alwis, CS Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Their work helped me secure a better grade. Thank you!"</p>
-          <cite>- Malinda Jayasena, CS Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very professional and punctual. Will use again!"</p>
-          <cite>- Ravindra Perera, Environmental Science Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Amazing quality and excellent customer service. Highly satisfied!"</p>
-          <cite>- Jayani Weerasekara, Hotel Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great turnaround time and very reasonable pricing."</p>
-          <cite>- Pradeep Silva, Tourism Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional work that met all my academic requirements."</p>
-          <cite>- Sahana Jayarathne, Education Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Exceptional quality and very responsive support team."</p>
-          <cite>- Kumara Jayasena, Music Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Highly professional service with impressive results."</p>
-          <cite>- Malika Dissanayake, Dance Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great experience working with this team. Very reliable!"</p>
-          <cite>- Arun Perera, Fine Arts Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Best assignment help service I've ever used!"</p>
-          <cite>- Indira Jayasuriya, Design Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent work quality and very professional approach."</p>
-          <cite>- Nalin Wickramasinghe, Fashion Design Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding service with great attention to detail."</p>
-          <cite>- Sanduni De Silva, Media Studies Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very helpful and professional team. Highly recommend!"</p>
-          <cite>- Suresh Kumara, Journalism Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Fantastic quality and very affordable rates."</p>
-          <cite>- Pooja Jayasinghe, Mass Communication Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional service with excellent communication."</p>
-          <cite>- Shalini Perera, Public Relations Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great work that helped me improve my academic performance!"</p>
-          <cite>- Chandana Wijesundera, Advertising Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Reliable and professional service. Very satisfied!"</p>
-          <cite>- Rajesh Jayawardena, Events Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent quality assignments delivered on time."</p>
-          <cite>- Anjana Silva, Human Resources Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very professional team with excellent work quality."</p>
-          <cite>- Vidhyut Perera, Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great service and very reasonable prices!"</p>
-          <cite>- Tharaka Jayasena, Operations Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding professionalism and quality work."</p>
-          <cite>- Samara De Silva, Supply Chain Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Best team for academic assistance. Highly satisfied!"</p>
-          <cite>- Mihiran Perera, Logistics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent work delivered with great professionalism."</p>
-          <cite>- Asha Jayasinghe, International Business Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very reliable service with outstanding quality!"</p>
-          <cite>- Prakash Jayasena, Trade Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Fantastic experience from start to finish!"</p>
-          <cite>- Sandhya De Alwis, Retail Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional and efficient service. Highly recommended!"</p>
-          <cite>- Bhavana Perera, Sales Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great quality work at affordable rates."</p>
-          <cite>- Chathuranga Jayasena, Marketing Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent service with very professional staff."</p>
-          <cite>- Nathalia Silva, Digital Marketing Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding assistance for my academic needs!"</p>
-          <cite>- Sriyan Perera, Brand Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very professional and reliable service!"</p>
-          <cite>- Kavya Jayasinghe, Product Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent quality and great customer support."</p>
-          <cite>- Vikram Perera, Innovation Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great work delivered with professionalism!"</p>
-          <cite>- Ravi Jayasena, Quality Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding service quality and responsiveness."</p>
-          <cite>- Divya De Silva, Risk Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very satisfied with the quality and service!"</p>
-          <cite>- Praveen Perera, Compliance Officer Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent work that exceeded expectations!"</p>
-          <cite>- Seema Jayasinghe, Audit Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional team delivering outstanding results."</p>
-          <cite>- Haresh Perera, Internal Audit Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great service with excellent attention to detail!"</p>
-          <cite>- Meera De Alwis, External Audit Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very professional and reliable team!"</p>
-          <cite>- Kishore Jayasena, Tax Planning Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent quality assignments delivered on time."</p>
-          <cite>- Radha Perera, Tax Compliance Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding service and great professionalism!"</p>
-          <cite>- Jayaprakash De Silva, Estate Planning Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very satisfied with the quality of work!"</p>
-          <cite>- Sneha Jayasinghe, Investment Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great assistance with excellent support!"</p>
-          <cite>- Arjun Perera, Portfolio Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional service with excellent results!"</p>
-          <cite>- Nithya Jayasena, Wealth Management Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding work quality and responsiveness!"</p>
-          <cite>- Varun De Silva, Financial Planning Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent team that delivers great work!"</p>
-          <cite>- Aadhya Perera, Investment Analysis Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very professional service with excellent quality!"</p>
-          <cite>- Nikhil Jayasinghe, Equity Research Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great work and very responsive team!"</p>
-          <cite>- Shreya Perera, Bond Analysis Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding assistance with my academic projects!"</p>
-          <cite>- Rakesh Jayasena, Derivatives Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent quality and professional service!"</p>
-          <cite>- Poornima De Silva, Options Trading Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very satisfied with their work and support!"</p>
-          <cite>- Santhosh Perera, Forex Trading Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great team that delivers excellent results!"</p>
-          <cite>- Vaishnavi Jayasinghe, Commodities Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding service quality and professionalism!"</p>
-          <cite>- Tushar Perera, Futures Trading Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional and reliable assistance!"</p>
-          <cite>- Vidya Jayasena, Risk Analysis Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent work with great attention to detail!"</p>
-          <cite>- Soham De Silva, Valuation Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very professional team with outstanding results!"</p>
-          <cite>- Isha Perera, Forensic Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great service and very supportive team!"</p>
-          <cite>- Aditya Jayasinghe, Fraud Investigation Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding assistance for all my academic needs!"</p>
-          <cite>- Ananya De Silva, Financial Reporting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent quality work delivered promptly!"</p>
-          <cite>- Aryan Perera, International Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very satisfied with the professional service!"</p>
-          <cite>- Bhoomika Jayasena, IFRS Standards Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great work that helped me achieve my goals!"</p>
-          <cite>- Cabir De Silva, Government Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional assistance with excellent results!"</p>
-          <cite>- Daksha Perera, Not-for-Profit Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding service quality and support!"</p>
-          <cite>- Ekaansh Jayasinghe, Environmental Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent team delivering outstanding work!"</p>
-          <cite>- Fiona De Silva, Social Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very reliable service with great professionalism!"</p>
-          <cite>- Gaurav Perera, Integrated Reporting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great assistance with my academic work!"</p>
-          <cite>- Harini Jayasena, Sustainability Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional service that exceeded expectations!"</p>
-          <cite>- Ilan De Silva, Corporate Governance Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding quality and very responsive team!"</p>
-          <cite>- Jyoti Perera, Compliance Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent work quality and great support!"</p>
-          <cite>- Kamal Jayasinghe, Digital Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very professional and highly recommended!"</p>
-          <cite>- Lavanya De Silva, AI in Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great service with exceptional quality!"</p>
-          <cite>- Manish Perera, Blockchain Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding assistance for my academic success!"</p>
-          <cite>- Nora Jayasena, Cloud Accounting Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent professionalism and work quality!"</p>
-          <cite>- Osman De Silva, Big Data Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very satisfied with the outstanding service!"</p>
-          <cite>- Priya Perera, Data Visualization Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great team delivering excellent results!"</p>
-          <cite>- Quinn Jayasinghe, Business Intelligence Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional service with outstanding results!"</p>
-          <cite>- Rashid De Silva, Advanced Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding support and excellent work quality!"</p>
-          <cite>- Sanaya Perera, Predictive Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent service and very professional team!"</p>
-          <cite>- Tara Jayasena, Performance Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very reliable and highly recommended!"</p>
-          <cite>- Udit De Silva, Strategic Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Great work that exceeded my expectations!"</p>
-          <cite>- Veda Perera, Operational Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Outstanding quality and excellent support!"</p>
-          <cite>- Wren Jayasinghe, Financial Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Professional assistance with great results!"</p>
-          <cite>- Xander De Silva, Marketing Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Excellent service quality and professionalism!"</p>
-          <cite>- Yara Perera, Customer Analytics Student</cite>
-        </div>
-        <div class="testimonial glass-card">
-          <p>"Very satisfied with the outstanding work!"</p>
-          <cite>- Zen Jayasena, Sales Analytics Student</cite>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing" class="section dark">
-    <h3>Pricing Plans</h3>
-    <div class="cards">
-      <div class="card price-card">
-        <h4>Basic</h4>
-        <p>Small Assignments</p>
-        <span>LKR 1,500+</span>
-      </div>
-
-      <div class="card price-card highlight">
-        <h4>Standard</h4>
-        <p>Reports & Mid Work</p>
-        <span>LKR 3,500+</span>
-      </div>
-
-      <div class="card price-card">
-        <h4>Premium</h4>
-        <p>Final Projects</p>
-        <span>Custom Pricing</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- SUBMIT -->
-  <section id="submit" class="section">
-    <h3>Submit Your Assignment</h3>
-
-    <form id="assignmentForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="text" id="service" placeholder="Service Needed" required>
-      <input type="text" id="deadline" placeholder="Deadline" required>
-      <textarea id="details" placeholder="Assignment Details"></textarea>
-
-      <button type="submit" class="btn btn-primary">
-        Send via WhatsApp
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
       </button>
-    </form>
+    </div>
+  </nav>
 
-    <p class="note">
-      WhatsApp will open automatically.<br>
-      Attach your assignment document and send.
-    </p>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-grid-floor"></div>
+    <div class="hero-glow-rings">
+      <div class="glow-ring ring-1"></div>
+      <div class="glow-ring ring-2"></div>
+      <div class="glow-ring ring-3"></div>
+    </div>
+    <div class="hero-floating-shapes">
+      <div class="float-shape shape-1"></div>
+      <div class="float-shape shape-2"></div>
+      <div class="float-shape shape-3"></div>
+      <div class="float-shape shape-4"></div>
+      <div class="float-shape shape-5"></div>
+      <div class="float-shape shape-6"></div>
+    </div>
+    <div class="hero-content" id="heroContent">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Next-Gen Academic Platform</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">
+          <span class="title-word" data-text="AZYNIX" style="--i:0">AZYNIX</span>
+        </span>
+      </h1>
+      <p class="hero-tagline">
+        <span class="tagline-word" style="--i:1">Smart</span>
+        <span class="tagline-word" style="--i:2">Assignments.</span>
+        <span class="tagline-word" style="--i:3">Zero</span>
+        <span class="tagline-word" style="--i:4">Stress.</span>
+      </p>
+      <p class="hero-subtitle">Next-generation academic freelancing experience.</p>
+      <div class="hero-buttons">
+        <a href="#submit" class="btn btn-primary magnetic-btn">
+          <span class="btn-content">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Submit Assignment
+          </span>
+          <span class="btn-glow"></span>
+        </a>
+        <a href="https://wa.me/94714668412" target="_blank" class="btn btn-secondary magnetic-btn">
+          <span class="btn-content">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.327 0-4.542-.646-6.468-1.858l-.452-.292-2.682.899.899-2.682-.292-.452A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            Contact on WhatsApp
+          </span>
+          <span class="btn-glow"></span>
+        </a>
+      </div>
+    </div>
+    <!-- Floating Dashboard Cards -->
+    <div class="hero-floating-cards">
+      <div class="float-card card-1" data-speed="0.03">
+        <div class="float-card-icon">📊</div>
+        <div class="float-card-label">Analytics</div>
+        <div class="float-card-value">98.7%</div>
+      </div>
+      <div class="float-card card-2" data-speed="0.05">
+        <div class="float-card-icon">⚡</div>
+        <div class="float-card-label">Speed</div>
+        <div class="float-card-value">24hrs</div>
+      </div>
+      <div class="float-card card-3" data-speed="0.04">
+        <div class="float-card-icon">🎯</div>
+        <div class="float-card-label">Accuracy</div>
+        <div class="float-card-value">100%</div>
+      </div>
+      <div class="float-card card-4" data-speed="0.06">
+        <div class="float-card-icon">🛡️</div>
+        <div class="float-card-label">Secure</div>
+        <div class="float-card-value">AES-256</div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section dark">
-    <h3>Contact Us</h3>
-    <p>Have questions? Reach out to us!</p>
-    <div class="contact-info">
-      <div>
-        <h4>WhatsApp</h4>
-        <p>+94 78 754 1191</p>
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about" id="about">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">Why <span class="text-gradient">AZYNIX</span> Exists</h2>
+        <p class="section-subtitle">We revolutionize academic support with cutting-edge technology and unmatched quality.</p>
       </div>
-      <div>
-        <h4>Email</h4>
-        <p>info@azynix.com</p>
-      </div>
-      <div>
-        <h4>Response Time</h4>
-        <p>Within 1 hour</p>
+      <div class="about-grid">
+        <div class="about-card reveal-up glass-card" style="--delay: 0.1s">
+          <div class="about-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="1.5"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00f5ff"/><stop offset="100%" style="stop-color:#7b2ff7"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Fast Delivery</h3>
+          <p>Lightning-fast turnaround. Get your assignments delivered well before your deadline with time to review.</p>
+          <div class="about-card-number">01</div>
+        </div>
+        <div class="about-card reveal-up glass-card" style="--delay: 0.2s">
+          <div class="about-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad2)" stroke-width="1.5"><defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00f5ff"/><stop offset="100%" style="stop-color:#7b2ff7"/></linearGradient></defs><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Plagiarism-Free</h3>
+          <p>100% original work guaranteed. Every assignment is crafted from scratch and verified through premium tools.</p>
+          <div class="about-card-number">02</div>
+        </div>
+        <div class="about-card reveal-up glass-card" style="--delay: 0.3s">
+          <div class="about-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad3)" stroke-width="1.5"><defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00f5ff"/><stop offset="100%" style="stop-color:#7b2ff7"/></linearGradient></defs><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3>Affordable Pricing</h3>
+          <p>Premium quality at student-friendly prices. No hidden charges. Transparent pricing for every service.</p>
+          <div class="about-card-number">03</div>
+        </div>
+        <div class="about-card reveal-up glass-card" style="--delay: 0.4s">
+          <div class="about-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad4)" stroke-width="1.5"><defs><linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00f5ff"/><stop offset="100%" style="stop-color:#7b2ff7"/></linearGradient></defs><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Professional Support</h3>
+          <p>24/7 dedicated support team. Get expert guidance and real-time updates on your assignments anytime.</p>
+          <div class="about-card-number">04</div>
+        </div>
+        <div class="about-card reveal-up glass-card" style="--delay: 0.5s">
+          <div class="about-card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#grad5)" stroke-width="1.5"><defs><linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00f5ff"/><stop offset="100%" style="stop-color:#7b2ff7"/></linearGradient></defs><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+          </div>
+          <h3>AI-Assisted Workflow</h3>
+          <p>Leveraging cutting-edge AI tools to enhance research quality, accuracy, and delivery speed.</p>
+          <div class="about-card-number">05</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 AZYNIX. All Rights Reserved.
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="section services" id="services">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">What We <span class="text-gradient">Deliver</span></h2>
+        <p class="section-subtitle">Comprehensive academic solutions powered by expertise and innovation.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.1s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>Assignments</h3>
+            <p>Expert-crafted assignments across all subjects and academic levels.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.15s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <h3>Research Papers</h3>
+            <p>In-depth research papers with proper methodology and citations.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.2s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3>Reports</h3>
+            <p>Comprehensive analytical reports with data-driven insights.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.25s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Presentations</h3>
+            <p>Visually stunning presentations that captivate your audience.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.3s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Programming Projects</h3>
+            <p>Full-stack development solutions for any programming challenge.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.35s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Final Year Projects</h3>
+            <p>Complete final year project support from proposal to presentation.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.4s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Case Studies</h3>
+            <p>Detailed case study analysis with real-world applications.</p>
+          </div>
+        </div>
+        <div class="service-card reveal-up tilt-card" style="--delay: 0.45s">
+          <div class="service-card-border"></div>
+          <div class="service-card-content">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <h3>Thesis Support</h3>
+            <p>End-to-end thesis writing and research support for graduate students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS / WHY CHOOSE US ===== -->
+  <section class="section stats" id="stats">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Numbers That <span class="text-gradient">Speak</span></h2>
+        <p class="section-subtitle">Our track record of excellence speaks for itself.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card reveal-up glass-card" style="--delay: 0.1s">
+          <div class="stat-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" class="stat-ring-bg"/>
+              <circle cx="60" cy="60" r="54" class="stat-ring-fill" data-percent="95" style="--color: #00f5ff"/>
+            </svg>
+            <div class="stat-value">
+              <span class="counter" data-target="1000">0</span><span class="stat-suffix">+</span>
+            </div>
+          </div>
+          <h3>Assignments Completed</h3>
+          <p>Successfully delivered across all disciplines</p>
+        </div>
+        <div class="stat-card reveal-up glass-card" style="--delay: 0.2s">
+          <div class="stat-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" class="stat-ring-bg"/>
+              <circle cx="60" cy="60" r="54" class="stat-ring-fill" data-percent="85" style="--color: #7b2ff7"/>
+            </svg>
+            <div class="stat-value">
+              <span class="counter" data-target="500">0</span><span class="stat-suffix">+</span>
+            </div>
+          </div>
+          <h3>Happy Students</h3>
+          <p>Trusted by students worldwide</p>
+        </div>
+        <div class="stat-card reveal-up glass-card" style="--delay: 0.3s">
+          <div class="stat-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" class="stat-ring-bg"/>
+              <circle cx="60" cy="60" r="54" class="stat-ring-fill" data-percent="100" style="--color: #00f5ff"/>
+            </svg>
+            <div class="stat-value">
+              <span>24/7</span>
+            </div>
+          </div>
+          <h3>Availability</h3>
+          <p>Round-the-clock support and delivery</p>
+        </div>
+        <div class="stat-card reveal-up glass-card" style="--delay: 0.4s">
+          <div class="stat-ring">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="54" class="stat-ring-bg"/>
+              <circle cx="60" cy="60" r="54" class="stat-ring-fill" data-percent="100" style="--color: #7b2ff7"/>
+            </svg>
+            <div class="stat-value">
+              <span>100<span class="stat-suffix">%</span></span>
+            </div>
+          </div>
+          <h3>Confidentiality</h3>
+          <p>Your data is encrypted and protected</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS SECTION ===== -->
+  <section class="section reviews" id="reviews">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What Students <span class="text-gradient">Say</span></h2>
+        <p class="section-subtitle">Real feedback from real students who trusted AZYNIX.</p>
+      </div>
+      <div class="reviews-carousel" id="reviewsCarousel">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card glass-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"AZYNIX delivered my research paper 2 days before the deadline. The quality was exceptional — my professor was impressed!"</p>
+            <div class="review-author">
+              <div class="review-avatar" style="--hue: 180">S</div>
+              <div>
+                <div class="review-name">Sarah M.</div>
+                <div class="review-uni">University of Colombo</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"The programming project was flawless. Clean code, proper documentation, and they even helped me understand the logic."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="--hue: 260">A</div>
+              <div>
+                <div class="review-name">Ahmed R.</div>
+                <div class="review-uni">SLIIT</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Best academic service I've ever used. Affordable, professional, and always available when I need help. Highly recommend!"</p>
+            <div class="review-author">
+              <div class="review-avatar" style="--hue: 320">D</div>
+              <div>
+                <div class="review-name">Dilini K.</div>
+                <div class="review-uni">University of Moratuwa</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"My thesis was a massive project and AZYNIX handled it beautifully. Chapter by chapter, perfectly referenced."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="--hue: 140">R</div>
+              <div>
+                <div class="review-name">Ravi P.</div>
+                <div class="review-uni">University of Kelaniya</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"Fast, reliable, and the presentation they made looked absolutely professional. Got an A+ grade!"</p>
+            <div class="review-author">
+              <div class="review-avatar" style="--hue: 40">N</div>
+              <div>
+                <div class="review-name">Nisha F.</div>
+                <div class="review-uni">NSBM Green University</div>
+              </div>
+            </div>
+          </div>
+          <div class="review-card glass-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">"I was skeptical at first, but AZYNIX exceeded all my expectations. The case study was detailed and well-structured."</p>
+            <div class="review-author">
+              <div class="review-avatar" style="--hue: 200">K</div>
+              <div>
+                <div class="review-name">Kamal S.</div>
+                <div class="review-uni">IIT Sri Lanka</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING SECTION ===== -->
+  <section class="section pricing" id="pricing">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title">Choose Your <span class="text-gradient">Plan</span></h2>
+        <p class="section-subtitle">Transparent pricing. No hidden fees. Pay for quality.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card reveal-up tilt-card" style="--delay: 0.1s">
+          <div class="pricing-card-inner glass-card">
+            <div class="pricing-tier">Basic</div>
+            <div class="pricing-price"><span class="currency">LKR</span> <span class="amount">2,500</span></div>
+            <div class="pricing-period">per assignment</div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> Standard Research</li>
+              <li><span class="check">✓</span> Basic Formatting</li>
+              <li><span class="check">✓</span> Plagiarism Report</li>
+              <li><span class="check">✓</span> 5-Day Delivery</li>
+              <li><span class="check">✓</span> 1 Free Revision</li>
+            </ul>
+            <a href="#submit" class="btn btn-outline magnetic-btn">
+              <span class="btn-content">Get Started</span>
+              <span class="btn-glow"></span>
+            </a>
+          </div>
+        </div>
+        <div class="pricing-card pricing-featured reveal-up tilt-card" style="--delay: 0.2s">
+          <div class="pricing-badge">MOST POPULAR</div>
+          <div class="pricing-card-inner glass-card">
+            <div class="pricing-tier">Standard</div>
+            <div class="pricing-price"><span class="currency">LKR</span> <span class="amount">5,000</span></div>
+            <div class="pricing-period">per assignment</div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> Deep Research & Analysis</li>
+              <li><span class="check">✓</span> Professional Formatting</li>
+              <li><span class="check">✓</span> Plagiarism Report</li>
+              <li><span class="check">✓</span> 3-Day Delivery</li>
+              <li><span class="check">✓</span> 3 Free Revisions</li>
+              <li><span class="check">✓</span> Priority Support</li>
+            </ul>
+            <a href="#submit" class="btn btn-primary magnetic-btn">
+              <span class="btn-content">Get Started</span>
+              <span class="btn-glow"></span>
+            </a>
+          </div>
+        </div>
+        <div class="pricing-card reveal-up tilt-card" style="--delay: 0.3s">
+          <div class="pricing-card-inner glass-card">
+            <div class="pricing-tier">Premium</div>
+            <div class="pricing-price"><span class="currency">LKR</span> <span class="amount">10,000</span></div>
+            <div class="pricing-period">per assignment</div>
+            <ul class="pricing-features">
+              <li><span class="check">✓</span> Expert-Level Research</li>
+              <li><span class="check">✓</span> Premium Formatting</li>
+              <li><span class="check">✓</span> Plagiarism + AI Report</li>
+              <li><span class="check">✓</span> 24-Hour Rush Delivery</li>
+              <li><span class="check">✓</span> Unlimited Revisions</li>
+              <li><span class="check">✓</span> Dedicated Expert</li>
+              <li><span class="check">✓</span> Phone Consultation</li>
+            </ul>
+            <a href="#submit" class="btn btn-outline magnetic-btn">
+              <span class="btn-content">Get Started</span>
+              <span class="btn-glow"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ASSIGNMENT SUBMISSION ===== -->
+  <section class="section submit-section" id="submit">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Submit Assignment</span>
+        <h2 class="section-title">Send Your <span class="text-gradient">Assignment</span></h2>
+        <p class="section-subtitle">Fill in the details and we'll get started immediately.</p>
+      </div>
+      <div class="submit-form-wrapper reveal-up">
+        <div class="submit-form glass-card">
+          <form id="assignmentForm" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="userName">Full Name</label>
+                <div class="input-wrapper">
+                  <input type="text" id="userName" name="name" placeholder="Enter your name" required>
+                  <div class="input-glow"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="userWhatsApp">WhatsApp Number</label>
+                <div class="input-wrapper">
+                  <input type="tel" id="userWhatsApp" name="whatsapp" placeholder="+94 7X XXX XXXX" required>
+                  <div class="input-glow"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="serviceType">Service Type</label>
+                <div class="input-wrapper">
+                  <select id="serviceType" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Assignment">Assignment</option>
+                    <option value="Research Paper">Research Paper</option>
+                    <option value="Report">Report</option>
+                    <option value="Presentation">Presentation</option>
+                    <option value="Programming Project">Programming Project</option>
+                    <option value="Final Year Project">Final Year Project</option>
+                    <option value="Case Study">Case Study</option>
+                    <option value="Thesis Support">Thesis Support</option>
+                  </select>
+                  <div class="input-glow"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="deadline">Deadline</label>
+                <div class="input-wrapper">
+                  <input type="date" id="deadline" name="deadline" required>
+                  <div class="input-glow"></div>
+                </div>
+              </div>
+              <div class="form-group full-width">
+                <label for="instructions">Instructions</label>
+                <div class="input-wrapper">
+                  <textarea id="instructions" name="instructions" rows="4" placeholder="Describe your requirements in detail..."></textarea>
+                  <div class="input-glow"></div>
+                </div>
+              </div>
+              <div class="form-group full-width">
+                <label>Upload File</label>
+                <div class="upload-zone" id="uploadZone">
+                  <div class="upload-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                      <polyline points="17 8 12 3 7 8"/>
+                      <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                  </div>
+                  <p class="upload-text">Drag & drop your file here</p>
+                  <p class="upload-subtext">or click to browse</p>
+                  <input type="file" id="fileUpload" name="file" hidden>
+                  <div class="upload-progress" id="uploadProgress">
+                    <div class="upload-progress-bar"></div>
+                  </div>
+                  <div class="upload-filename" id="uploadFilename"></div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit magnetic-btn" id="submitBtn">
+              <span class="btn-content">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.327 0-4.542-.646-6.468-1.858l-.452-.292-2.682.899.899-2.682-.292-.452A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                SEND TO WHATSAPP
+              </span>
+              <span class="btn-glow"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact" id="contact">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Connect With <span class="text-gradient">AZYNIX</span></h2>
+        <p class="section-subtitle">Reach out through any platform. We're always here.</p>
+      </div>
+      <div class="contact-grid">
+        <a href="https://wa.me/94714668412" target="_blank" class="contact-card reveal-up glass-card tilt-card" style="--delay: 0.1s">
+          <div class="contact-icon" style="--glow: #25D366">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.96 11.96 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>+94 71 466 8412</p>
+        </a>
+        <a href="https://facebook.com/azynix" target="_blank" class="contact-card reveal-up glass-card tilt-card" style="--delay: 0.2s">
+          <div class="contact-icon" style="--glow: #1877F2">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <h3>Facebook</h3>
+          <p>@azynix</p>
+        </a>
+        <a href="https://instagram.com/azynix" target="_blank" class="contact-card reveal-up glass-card tilt-card" style="--delay: 0.3s">
+          <div class="contact-icon" style="--glow: #E4405F">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="#E4405F"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <h3>Instagram</h3>
+          <p>@azynix</p>
+        </a>
+        <a href="mailto:contact@azynix.com" class="contact-card reveal-up glass-card tilt-card" style="--delay: 0.4s">
+          <div class="contact-icon" style="--glow: #00f5ff">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#00f5ff" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p>contact@azynix.com</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="footer-glow-line"></div>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-text" data-text="AZYNIX">AZYNIX</span>
+      </div>
+      <p class="footer-tagline">Next-generation academic freelancing experience.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#submit">Submit</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-copyright">
+        <p>© <span id="currentYear"></span> AZYNIX. All rights reserved.</p>
+        <p class="footer-sub">Designed for the future of academic excellence.</p>
+      </div>
+    </div>
+    <div class="footer-particles"></div>
   </footer>
+
+  <!-- WhatsApp Notification Popup -->
+  <div class="notification-popup" id="notificationPopup">
+    <div class="notification-content glass-card">
+      <div class="notification-icon">📎</div>
+      <p>Please attach your assignment file in WhatsApp before sending.</p>
+      <button class="notification-close" id="notificationClose">Got it</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
