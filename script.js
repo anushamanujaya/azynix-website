@@ -393,7 +393,7 @@
       `📎 _File will be attached separately_`;
 
     const encodedMessage = encodeURIComponent(message);
-    const waUrl = `https://wa.me/94714668412?text=${encodedMessage}`;
+    const waUrl = `https://wa.me/94787541191?text=${encodedMessage}`;
 
     // Show notification popup
     if (uploadedFile) {
